@@ -1,0 +1,66 @@
+.Statistic__costs_list {
+  margin-bottom: 12px;
+  border-bottom: 2px solid var(--form-input-ph-color);
+}
+
+.Statistic__costs_item:not(:first-child) {
+  border-top: 2px solid var(--statistic-costs-header-color);
+}
+
+.Statistic__costs_item_container {
+  width: 280px;
+  min-height: 38px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Statistic__categories {
+  display: flex;
+}
+
+.Statistic__categories_color {
+  margin: 0;
+  margin-right: 15px;
+  width: 15px;
+  height: 15px;
+  align-self: center;
+}
+
+.Statistic__categories_descr {
+  margin: 0;
+  font-size: 13px;
+  color: var(--primary-font-color);
+}
+
+.Statistic__categories_amount {
+  margin: 0;
+  font-size: 13px;
+  color: var(--statistic-categories-amount-color);
+  font-family: 'Segoe UI';
+}
+
+.Statistic__fallback {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .Statistic__costs_list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 210px;
+    border-bottom: 3px solid #b9c9d4;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Statistic__costs_item:not(:first-child) {
+    border-top: none;
+  }
+  .Statistic__costs_item:not(:nth-child(5n + 1)) {
+    border-top: 2px solid var(--statistic-costs-header-color);
+  }
+}

@@ -1,0 +1,53 @@
+.AppBar__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: var(--header-height-mobile);
+  background-color: var(--header-bg-mobile-color);
+}
+
+.AppBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 90%;
+}
+
+.link {
+  max-height: 40px;
+}
+
+.logoSvg {
+  width: 53px;
+}
+
+@media screen and (min-width: 768px) {
+  .AppBar__container {
+    height: var(--header-height-tablet);
+    background-color: var(--white);
+    box-shadow: var(--primary-box-shadow);
+  }
+
+  .link {
+    max-height: unset;
+    display: flex;
+    align-items: center;
+  }
+
+  .logoSvg {
+    width: 100px;
+  }
+
+  .logoTitle {
+    font-size: 24px;
+    color: var(--header-bg-mobile-color);
+    transition: 0.2s linear;
+  }
+
+  .logoTitle:hover,
+  .logoTitle:focus {
+    color: var(--user-name-mobile-color);
+    transition: 0.2s linear;
+  }
+}

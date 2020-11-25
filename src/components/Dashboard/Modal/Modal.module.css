@@ -1,0 +1,196 @@
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: var(--modal-overlay);
+  z-index: 1200;
+}
+
+.Modal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 50px);
+  background-color: var(--white);
+  color: var(--primary-font-color);
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 40px;
+  overflow-y: scroll;
+}
+.container {
+  min-width: 90%;
+  margin: 0 auto 20px;
+}
+.Heading {
+  min-height: 50px;
+  margin: 0;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-bg-green-color);
+  border-radius: 5px 5px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.Form {
+  text-align: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.input__container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.input {
+  width: 135px;
+  height: 35px;
+  font-size: 14px;
+  text-align: center;
+  border-style: none;
+  border: 2px solid var(--form-input-ph-color);
+  border-radius: 5px;
+}
+.input:first-child {
+  margin-right: 20px;
+}
+.input::placeholder {
+  color: var(--user-name-mobile-color);
+}
+.subHeading {
+  margin: 0;
+}
+.inputAmount::-webkit-outer-spin-button,
+.inputAmount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.inputAmount {
+  -moz-appearance: textfield;
+}
+
+/* Radio button */
+.radioLabel {
+  display: block;
+  width: 100%;
+}
+.radioInputIncome {
+  margin-right: 10px;
+  appearance: none;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  border: 1px solid var(--statistic-btn-bcgr-color);
+  transition: 0.2s linear;
+  outline: none;
+  position: relative;
+}
+.radioInputIncome:checked::after {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--statistic-btn-bcgr-color);
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+.radioInputCost {
+  composes: radioInputIncome;
+  border-color: var(--statistic-total-cost-color);
+}
+.radioInputCost:checked::after {
+  background-color: var(--statistic-total-cost-color);
+}
+.radioName {
+  font-weight: 500;
+}
+/* Textarea */
+.inputTextarea {
+  width: 100%;
+  border-style: none;
+  border: 2px solid var(--form-input-ph-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  /* overflow: hidden; */
+  resize: none;
+}
+/* Buttons */
+.submitButton {
+  composes: input;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  z-index: 1;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  background-image: var(--reg-btn-bg-image);
+  box-shadow: var(--primary-box-shadow);
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.submitButton::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: var(--reg-btn-bg-image-before);
+  border-radius: 6px;
+  transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+.submitButton:hover::before {
+  opacity: 1;
+}
+.closeButton {
+  width: 40px;
+  position: absolute;
+  top: 55px;
+  left: calc(50% - 120px);
+  transform: rotate(180deg);
+  fill: var(--white);
+  background: transparent;
+  border: none;
+}
+.submitButton:first-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .Overlay {
+    align-items: center;
+  }
+  .Modal {
+    max-width: 500px;
+    height: auto;
+    max-height: 90%;
+    margin-top: 0;
+    overflow-y: auto;
+  }
+  .Heading {
+    color: var(--user-name-mobile-color);
+    background-color: var(--dashboard-odd-string-bg-color);
+  }
+  .Form {
+    max-width: 400px;
+    height: auto;
+  }
+}

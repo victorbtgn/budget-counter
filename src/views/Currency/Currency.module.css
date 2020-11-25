@@ -1,0 +1,55 @@
+.Currency__container {
+  border-radius: 5px;
+  box-shadow: var(--primary-box-shadow);
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--grey);
+}
+
+.list:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.title {
+  composes: list;
+  background-color: var(--grey);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.loader {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .Currency__container {
+    height: auto;
+    max-width: 350px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: var(--white);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .Currency__container {
+    min-height: 400px;
+    max-width: unset;
+    margin: 0;
+    background: -130px 220px / 150% no-repeat
+        url('../../svg/waves-chart-bg.svg'),
+      var(--white);
+  }
+
+  .list:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

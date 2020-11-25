@@ -1,0 +1,83 @@
+.MainLayout {
+  min-height: calc(100vh - var(--header-height-mobile));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+}
+.Container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+.Sidebar {
+  min-height: var(--header-height-mobile);
+  width: 100%;
+}
+.Sidebar__container {
+  width: 100%;
+}
+.Page {
+  width: 100%;
+  height: auto;
+  flex-grow: 1;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .MainLayout {
+    min-height: calc(100vh - var(--header-height-tablet));
+    background-color: var(--body-bg-desktop-color);
+  }
+  .Sidebar {
+    min-height: var(--header-height-tablet);
+    background-color: var(--white);
+  }
+  .Sidebar__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Page {
+    padding-top: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+    background: center bottom / 150% no-repeat url('../svg/waves-chart-bg.svg'),
+      var(--white);
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .Container {
+    max-width: 1700px;
+    flex-direction: row;
+    align-items: unset;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+  }
+  .Sidebar {
+    height: 100%;
+    flex: 1 0 22%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-right: 40px;
+    background-color: var(--body-bg-desktop-color);
+  }
+  .Sidebar__container {
+    display: block;
+    width: 100%;
+  }
+  .Page {
+    flex-grow: 1;
+    padding-right: 0;
+    padding-left: 0;
+    background: none;
+  }
+}

@@ -1,0 +1,23 @@
+.buttonsBox {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 69px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dashboard-odd-string-bg-color);
+  box-shadow: var(--primary-box-shadow);
+}
+
+@media (min-width: 768px) {
+  .buttonsBox {
+    position: static;
+    min-height: 90px;
+    background-color: var(--primary-bg-green-color);
+    border-radius: 5px 5px 0 0;
+    box-shadow: none;
+  }
+}

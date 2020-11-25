@@ -1,0 +1,39 @@
+.UserMenu {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-bg-green-color);
+}
+
+.name {
+  margin-right: 16px;
+  text-align: right;
+}
+
+.divider {
+  width: 1px;
+  background-color: var(--primary-bg-green-color);
+  align-self: normal;
+}
+
+.logout {
+  cursor: pointer;
+}
+.button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-style: none;
+  cursor: pointer;
+  fill: var(--user-name-mobile-color);
+}
+.button:hover .logout,
+.button:focus .logout {
+  color: var(--user-name-mobile-color);
+  transition: 0.2s linear;
+}
+.logoutLogo {
+  width: var(--svg-width);
+  padding: 4px;
+}
